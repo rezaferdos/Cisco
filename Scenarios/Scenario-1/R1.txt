@@ -1,0 +1,28 @@
+en
+conf t
+!Hostname
+h R1
+!
+! Create Vlans
+!
+int g 0/0/0
+no sh
+ip add 172.16.16.1 255.255.255.0
+exit
+int g 0/0/1
+no sh
+ip add 172.16.17.1 255.255.255.0
+exit
+int loop 1
+ip add 8.8.8.8 255.255.255.255
+exit
+!
+! OSPF
+!
+router ospf 1
+router-id 3.3.3.3
+network 8.8.8.8 255.255.255.255 area 0 
+network 172.16.16.1 0.0.0.255 area 0 
+network 172.16.17.1 0.0.0.255 area 0 
+end
+

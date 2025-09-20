@@ -1,0 +1,18 @@
+en
+conf t
+! access-list 1 
+! deny
+! permit
+! remark
+! access-list 1 deny  
+! A.B.C.D
+! any
+! host
+access-list 1 deny 172.16.16.20
+access-list 1 deny 172.16.16.21
+access-list 1 permit 172.16.16.0 0.0.0.255
+
+int g 3/0
+ip access-group 1 out 
+end
+sh run | sec  access-list

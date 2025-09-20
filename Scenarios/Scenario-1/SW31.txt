@@ -1,0 +1,40 @@
+en
+conf t
+!Hostname
+h SW31
+!
+! Create Vlans
+!
+vlan 10
+vlan 20
+exit
+!
+! Trunk 
+!
+int ran fa 0/4-5
+!switchport trunk encapsulation dot1q
+switchport mode trunk
+exit
+int fa 0/1
+switchport mode acc
+sw acc vlan 10
+int fa 0/2
+switchport mode acc
+sw acc vlan 20
+int fa 0/3
+switchport mode acc
+sw acc vlan 10
+exit
+!
+! RSPT (Load Balance)
+!
+spanning-tree mode rapid-pvst 
+!
+! 
+!
+end
+show vlan br
+
+
+
+

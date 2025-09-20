@@ -1,0 +1,27 @@
+en
+conf t
+h ISP
+
+int g 0/0/0
+no sh
+ip add 100.100.100.2 255.255.255.0
+
+int g 0/0/1
+no sh
+ip add 200.200.200.2 255.255.255.0
+
+int loo 1
+no sh
+ip add 8.8.8.8 255.255.255.0
+
+exit
+
+! Routing
+ip route 10.11.12.0 255.255.255.0 100.100.100.1
+ip route 13.14.15.0 255.255.255.0 200.200.200.1
+
+
+end
+debu ip icmp
+sh ip route
+

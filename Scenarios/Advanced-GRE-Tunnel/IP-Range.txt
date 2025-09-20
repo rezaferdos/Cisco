@@ -1,0 +1,15 @@
+10.0.0.0/30  — Network: 10.0.0.0  — Usable: 10.0.0.1  — Usable: 10.0.0.2  — Broadcast: 10.0.0.3
+10.0.0.4/30  — Network: 10.0.0.4  — Usable: 10.0.0.5  — Usable: 10.0.0.6  — Broadcast: 10.0.0.7
+10.0.0.8/30  — Network: 10.0.0.8  — Usable: 10.0.0.9  — Usable: 10.0.0.10 — Broadcast: 10.0.0.11
+10.0.0.12/30 — Network: 10.0.0.12 — Usable: 10.0.0.13 — Usable: 10.0.0.14 — Broadcast: 10.0.0.15
+10.0.0.16/30 — Network: 10.0.0.16 — Usable: 10.0.0.17 — Usable: 10.0.0.18 — Broadcast: 10.0.0.19
+10.0.0.20/30 — Network: 10.0.0.20 — Usable: 10.0.0.21 — Usable: 10.0.0.22 — Broadcast: 10.0.0.23
+10.0.0.24/30 — Network: 10.0.0.24 — Usable: 10.0.0.25 — Usable: 10.0.0.26 — Broadcast: 10.0.0.27
+10.0.0.28/30 — Network: 10.0.0.28 — Usable: 10.0.0.29 — Usable: 10.0.0.30 — Broadcast: 10.0.0.31
+10.0.0.32/30 — Network: 10.0.0.32 — Usable: 10.0.0.33 — Usable: 10.0.0.34 — Broadcast: 10.0.0.35
+10.0.0.36/30 — Network: 10.0.0.36 — Usable: 10.0.0.37 — Usable: 10.0.0.38 — Broadcast: 10.0.0.39
+10.0.0.40/30 — Network: 10.0.0.40 — Usable: 10.0.0.41 — Usable: 10.0.0.42 — Broadcast: 10.0.0.43
+10.0.0.44/30 — Network: 10.0.0.44 — Usable: 10.0.0.45 — Usable: 10.0.0.46 — Broadcast: 10.0.0.47
+10.0.0.48/30 — Network: 10.0.0.48 — Usable: 10.0.0.49 — Usable: 10.0.0.50 — Broadcast: 10.0.0.51
+10.0.0.52/30 — Network: 10.0.0.52 — Usable: 10.0.0.53 — Usable: 10.0.0.54 — Broadcast: 10.0.0.55
+10.0.0.56/30 — Network: 10.0.0.56 — Usable: 10.0.0.57 — Usable: 10.0.0.58 — Broadcast: 10.0.0.59

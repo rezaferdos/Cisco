@@ -1,0 +1,41 @@
+en
+conf t
+h R1
+int g 0/0/0
+ip add 10.0.0.53 255.255.255.252
+ip nat out
+no shu
+int g 0/0/1
+ip add 172.16.16.1 255.255.255.0
+ip nat in
+no shu
+exit
+ip route 0.0.0.0 0.0.0.0 10.0.0.54
+!
+! PAT
+!
+access-list 1 permit any 
+ip nat inside source list 1 interface gigabitEthernet 0/0/0 overload 
+!
+! Tunnel
+!
+interface tunnel 1
+tunnel source gigabitEthernet 0/0/0
+tunnel destination 10.0.0.57
+ip address 200.200.200.1 255.255.255.252
+!
+! OSPF
+!
+router ospf 1
+rou 1.1.1.1
+network 200.200.200.0 0.0.0.3 area 0
+network 172.16.16.0 0.0.0.255 area 0
+
+
+
+
+
+
+
+
+

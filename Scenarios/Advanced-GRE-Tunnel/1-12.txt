@@ -1,0 +1,186 @@
+!
+! R1
+!
+en
+conf t
+hostname R1
+interface Gig0/0
+ip address 10.0.0.1 255.255.255.252
+no shutdown
+interface Gig1/0
+ip address 10.0.0.5 255.255.255.252
+no shutdown
+interface Gig2/0
+ip address 10.0.0.54 255.255.255.252
+no shutdown
+router ospf 1
+router-id 1.1.1.1
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R2
+!
+en
+conf t
+hostname R2
+interface Gig0/0/0
+ip address 10.0.0.2 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.9 255.255.255.252
+no shutdown
+router ospf 1
+router-id 2.2.2.2
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R3
+!
+en
+conf t
+hostname R3
+interface Gig0/0/0
+ip address 10.0.0.6 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.17 255.255.255.252
+no shutdown
+router ospf 1
+router-id 3.3.3.3
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R4
+!
+en
+conf t
+hostname R4
+interface Gig0/0/0
+ip address 10.0.0.13 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.10 255.255.255.252
+no shutdown
+router ospf 1
+router-id 4.4.4.4
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R5
+!
+en
+conf t
+hostname R5
+interface Gig0/0/0
+ip address 10.0.0.14 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.45 255.255.255.252
+no shutdown
+router ospf 1
+router-id 5.5.5.5
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R6
+!
+en
+conf t
+hostname R6
+interface Gig0/0/0
+ip address 10.0.0.18 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.21 255.255.255.252
+no shutdown
+router ospf 1
+router-id 6.6.6.6
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R7
+!
+en
+conf t
+hostname R7
+interface Gig0/0/0
+ip address 10.0.0.46 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.41 255.255.255.252
+no shutdown
+router ospf 1
+router-id 7.7.7.7
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R8
+!
+en
+conf t
+hostname R8
+interface Gig0/0/0
+ip address 10.0.0.37 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.42 255.255.255.252
+no shutdown
+router ospf 1
+router-id 8.8.8.8
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R9
+!
+en
+conf t
+hostname R9
+interface Gig0/0/0
+ip address 10.0.0.22 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.25 255.255.255.252
+no shutdown
+router ospf 1
+router-id 9.9.9.9
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R10
+!
+en
+conf t
+hostname R10
+interface Gig0/0/0
+ip address 10.0.0.26 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.29 255.255.255.252
+no shutdown
+router ospf 1
+router-id 10.10.10.10
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R11
+!
+en
+conf t
+hostname R11
+interface Gig0/0/0
+ip address 10.0.0.33 255.255.255.252
+no shutdown
+interface Gig0/0/1
+ip address 10.0.0.38 255.255.255.252
+no shutdown
+router ospf 1
+router-id 11.11.11.11
+network 10.0.0.0 0.0.0.255 area 0
+!
+! R12
+!
+en
+conf t
+hostname R12
+interface Gig0/0
+ip address 10.0.0.34 255.255.255.252
+no shutdown
+interface Gig1/0
+ip address 10.0.0.30 255.255.255.252
+no shutdown
+interface Gig2/0
+ip address 10.0.0.58 255.255.255.252
+no shutdown
+router ospf 1
+router-id 12.12.12.12
+network 10.0.0.0 0.0.0.255 area 0

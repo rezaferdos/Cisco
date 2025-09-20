@@ -1,0 +1,13 @@
+en
+conf t
+h R4
+ipv6 unicast-routing 
+
+int g 0/0/0
+no sh 
+ipv6 address 2000:A:B:34::1/64
+exit
+ipv6 route ::/0 2000:A:B:34::2
+end
+show ipv6 route
+

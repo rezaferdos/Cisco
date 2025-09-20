@@ -1,0 +1,19 @@
+en
+conf t
+h R2
+ipv6 unicast-routing 
+ipv6 router ospf 1
+router-id 2.2.2.2
+exit
+int g 0/0/0
+no sh 
+ipv6 address 2000:A:B:12::1/64
+ipv6 ospf 1 area 10
+exit
+int g 0/0/1
+no sh 
+ipv6 address 2000:A:B:23::2/64
+ipv6 ospf 1 area 0
+end
+show ipv6 route
+

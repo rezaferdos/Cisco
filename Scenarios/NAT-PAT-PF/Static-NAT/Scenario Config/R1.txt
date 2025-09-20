@@ -1,0 +1,28 @@
+en
+conf t
+h R1
+int g 1/0
+no sh
+ip add 100.100.100.1 255.255.255.0
+
+! NAT Outside
+ip nat outside
+
+int g 0/0
+no sh
+ip add 172.16.16.1 255.255.255.0
+
+! NAT Inside
+ip nat inside
+
+exit
+
+! NAT STATIC
+ip nat inside source static 172.16.16.2 10.11.12.13 
+ip nat inside source static 172.16.16.3 10.11.12.14  
+
+ip route 0.0.0.0 0.0.0.0 100.100.100.2
+end
+ping 8.8.8.8
+
+sh ip route

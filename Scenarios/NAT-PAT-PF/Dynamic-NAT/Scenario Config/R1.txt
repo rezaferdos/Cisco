@@ -1,0 +1,33 @@
+en
+conf t
+h R1
+int g 1/0
+no sh
+ip add 100.100.100.1 255.255.255.0
+
+! NAT Outside
+ip nat outside
+
+int g 0/0
+no sh
+ip add 172.16.16.1 255.255.255.0
+
+! NAT Inside
+ip nat inside
+
+exit
+
+! Create ACL
+ip access-list standard myacl 
+permit any 
+exit
+
+! NAT DYNAMIC
+ip nat pool mynat 10.11.12.1 10.11.12.2 netmask 255.255.255.252 
+ip nat inside source list myacl pool mynat 
+
+ip route 0.0.0.0 0.0.0.0 100.100.100.2
+end
+ping 8.8.8.8
+
+sh ip route

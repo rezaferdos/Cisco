@@ -1,0 +1,31 @@
+en
+conf t
+! access-list 100 
+! deny    Specify packets to reject
+! permit  Specify packets to forward
+! remark  Access list entry comment
+
+! Remove All ACL
+no access-list 100
+int g 3/0
+no ip acc 100 out
+exit
+
+!! Enter New ACL
+
+! H 20 Only Access to DHCP Server
+access-list  100 deny icmp host 172.16.16.20 host 172.16.10.10 
+access-list 100 permit ip host 172.16.16.20 host 172.16.10.10 
+access-list 100 deny ip host 172.16.16.20 any 
+! H 21 Not Allowed to DNS Server
+access-list 100 deny udp host 172.16.16.21 host 172.16.10.20 eq 53 
+! No Body Can't Ping DNS and DHCP Server
+access-list  100 deny icmp 172.16.16.0 0.0.0.255 host 172.16.10.10
+access-list  100 deny icmp 172.16.16.0 0.0.0.255 host 172.16.10.20
+! H 22 Is OK!
+access-list 100 permit ip 172.16.16.0 0.0.0.255 any
+
+int g 3/0
+ip acc 100 out
+
+
